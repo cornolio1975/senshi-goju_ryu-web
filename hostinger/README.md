@@ -50,3 +50,13 @@ Changing config.php after initialization does not reset it.
 No Cloudflare service or Sites-authentication header is trusted by this edition.
 For a different hostname or path, update origin and session path in api.php
 and RewriteBase in .htaccess before building.
+
+## Bulletin board and password controls
+
+Admin Centre includes scheduled club/branch bulletins and show/hide controls
+for password fields. Bulletin launch and close inputs use Malaysia time
+(Asia/Kuala_Lumpur, UTC+08:00). Only enabled bulletins inside their active
+window are returned publicly; launch is inclusive and close is exclusive.
+Public pages poll every 30 seconds and hide expired items every second.
+The PHP API adds its bulletin table automatically without replacing existing
+club data or credentials. No cron task is needed.
