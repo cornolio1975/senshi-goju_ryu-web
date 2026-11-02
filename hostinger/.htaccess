@@ -3,7 +3,7 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /clubs/senshi_goju-ryu/
 RewriteRule ^admin/?$ admin.html [L]
-RewriteRule ^(?:config|README|build|Admin) - [F,L,NC]
+RewriteRule ^(?:config\.php|README\.md|build\.mjs|Admin\.tsx)$ - [F,L,NC]
 <FilesMatch "^(config\.php|.*\.(sqlite|db|log|bak))$">
 Require all denied
 </FilesMatch>
