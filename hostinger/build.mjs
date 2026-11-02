@@ -13,7 +13,7 @@ await build({entryPoints:[path.join(here,'entry.tsx')],bundle:true,minify:true,o
 writeFileSync(path.join(out,'styles.css'),readFileSync(path.join(root,'app/globals.css'),'utf8')+'\n.hero-lines{position:absolute;inset:0;pointer-events:none}\n');
 copyFileSync(path.join(root,'public/club_logo.png'),path.join(out,'club_logo.png'));
 for(const f of ['api.php','.htaccess'])copyFileSync(path.join(here,f),path.join(out,f));
-const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="KELAB KARATE DO SENSHI GOJU-RYU · C SGR-13884 · Traditional Goju-Ryu karate in Selangor, Malaysia."><title>Senshi Goju-Ryu | Discipline. Respect. Strength. Unity.</title><link rel="icon" href="club_logo.png"><link rel="stylesheet" href="styles.css?v=3"><script defer src="app.js?v=3"></script></head><body><div id="root"></div></body></html>`;
+const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="KELAB KARATE DO SENSHI GOJU-RYU · C SGR-13884 · Traditional Goju-Ryu karate in Selangor, Malaysia."><title>Senshi Goju-Ryu | Discipline. Respect. Strength. Unity.</title><link rel="icon" href="club_logo.png"><link rel="stylesheet" href="styles.css?v=4"><script defer src="app.js?v=4"></script></head><body><div id="root"></div></body></html>`;
 for(const f of ['index.html','admin.html'])writeFileSync(path.join(out,f),html);
 rmSync(path.join(here,'Home.tsx'));rmSync(path.join(here,'entry.tsx'));
 console.log('Built Hostinger subfolder site.');
