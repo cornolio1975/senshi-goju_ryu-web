@@ -1,0 +1,15 @@
+Options -Indexes
+DirectoryIndex index.html
+RewriteEngine On
+RewriteBase /clubs/senshi_goju-ryu/
+RewriteRule ^admin/?$ admin.html [L]
+RewriteRule ^(?:config|README|build|Admin) - [F,L,NC]
+<FilesMatch "^(config\.php|.*\.(sqlite|db|log|bak))$">
+Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+</IfModule>
