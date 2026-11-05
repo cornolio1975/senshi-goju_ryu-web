@@ -3,3 +3,4 @@ dist/
 Home.tsx
 entry.tsx
 config.php
+*.zip
