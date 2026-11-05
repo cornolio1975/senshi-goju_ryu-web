@@ -1,1 +1,0 @@
-{"name":"senshi-hostinger","private":true,"type":"module","scripts":{"build":"node build.mjs"},"dependencies":{"esbuild":"0.27.0","react":"19.2.0","react-dom":"19.2.0"}}
