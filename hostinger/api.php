@@ -95,7 +95,7 @@ try {
       ['inst_bala','Shihan Bala','Shihan','Senior Goju-Ryu karate instructor leading Dojo Shihan Bala.',2,'dojo_bala','Head Instructor'],
       ['inst_mohan','Sensei Mohan','Sensei','Dedicated Goju-Ryu karate instructor leading Sensei Mohan training group.',3,'dojo_mohan','Instructor'],
     ];
-    $qi=$db->prepare('INSERT OR IGNORE INTO instructors(id,name,rank,bio,contact,whatsapp,photo_id,sort_order,active,updated) VALUES(?,?,?,?,?,?,?,1,?)');
+    $qi=$db->prepare('INSERT OR IGNORE INTO instructors(id,name,rank,bio,contact,whatsapp,photo_id,sort_order,active,updated) VALUES(?,?,?,?,?,?,?,?,1,?)');
     $qdi=$db->prepare('INSERT OR IGNORE INTO dojo_instructors(id,dojo_id,instructor_id,role,sort_order) VALUES(?,?,?,?,?)');
     foreach($seedInst as $si){
       $qi->execute([$si[0],$si[1],$si[2],$si[3],'','','',$si[4],$nowSeed]);

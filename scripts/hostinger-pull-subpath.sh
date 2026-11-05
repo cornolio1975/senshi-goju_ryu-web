@@ -26,3 +26,4 @@ done
 
 rm -rf "$TMP"
 echo "Deployed Senshi Goju-Ryu v9 successfully at $(date -u)" > "$DATA/last_deploy.log"
+

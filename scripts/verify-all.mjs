@@ -112,3 +112,4 @@ assert.equal(indexHtml.includes('styles.css?v=9'), true, 'index.html must refere
 console.log('✓ Test 5 Passed: All Hostinger subfolder dist assets present and cache-busted (?v=9).');
 
 console.log('\nALL AUTOMATED TESTS PASSED SUCCESSFULLY.');
+
